@@ -4,7 +4,7 @@
     <p>Add a new Entry:</p>
     <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_div }}
         <button name="submit">Add new entry</button>
     </form>
     
